@@ -86,7 +86,7 @@ class HasContactIdLaunchRequestHandler(AbstractRequestHandler):
         # continue to making recommendations or waiting for further intent from user
         attr = handler_input.attributes_manager.persistent_attributes
         firstname = attr['firstname']
-        speak_output = "<amazon:domain name=\"fun\">Hi {firstname}! Welcome back to Optus!</amazon:domain>".format(firstname=firstname)
+        speak_output = "<amazon:domain name=\"fun\">Hi {firstname}! Welcome back to the Optus Shop! What can I do for you today?</amazon:domain>".format(firstname=firstname)
         return (
             handler_input.response_builder
                 .speak(speak_output)
@@ -109,7 +109,8 @@ class GetRecommendationIntentHandler(AbstractRequestHandler):
         # make the recommendation to the user - build the sentence for the recommendation 
         speak_output = ""
         if category == "security":
-            speak_output = "<p>I'd recommend a {recommendation} so that you always know when your next amazing online order arrives.</p>".format(recommendation=recommendation)
+            # I'd recommend a ring video doorbell. For just $90 you'll never miss another delivery. How good would that be!
+            speak_output = "<p>I'd recommend a {recommendation}. For just $90 you'll never miss another delivery.</p>".format(recommendation=recommendation)
         elif category == "connectivity": 
             speak_output = "<p>I'd recommend an {recommendation} for all your smart devices at home.</p>".format(recommendation=recommendation)
         else: 

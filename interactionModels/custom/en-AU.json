@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "optus alex",
+      "invocationName": "optus shop",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -55,6 +55,7 @@
           "name": "SubmitOrderIntent",
           "slots": [],
           "samples": [
+            "yes purchase this for me",
             "yes",
             "yes please",
             "Yep confirm the order",
@@ -114,5 +115,5 @@
       }
     ]
   },
-  "version": "11"
+  "version": "13"
 }
