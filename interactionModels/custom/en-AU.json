@@ -1,0 +1,118 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "optus alex",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "CaptureContactIdIntent",
+          "slots": [
+            {
+              "name": "contact_id",
+              "type": "AMAZON.Ordinal"
+            }
+          ],
+          "samples": [
+            "here is my contact id {contact_id}",
+            "My contact id is {contact_id}"
+          ]
+        },
+        {
+          "name": "GetRecommendationIntent",
+          "slots": [],
+          "samples": [
+            "I\u0027m not sure what to buy for my smart home. Can you recommend me something",
+            "Can you recommend me a smart home product",
+            "What can you recommend i buy for my smart home",
+            "what smart device should i buy",
+            "How can I make my house a smart home",
+            "I wanna buy something for my smart home",
+            "what can i buy",
+            "make me some smart home product recommendations",
+            "what smart home products should i get"
+          ]
+        },
+        {
+          "name": "SubmitOrderIntent",
+          "slots": [],
+          "samples": [
+            "yes",
+            "yes please",
+            "Yep confirm the order",
+            "That sounds great place the order",
+            "Yes confirm the order",
+            "Yes place the order"
+          ]
+        },
+        {
+          "name": "OrderConfirmationIntent",
+          "slots": [],
+          "samples": [
+            "Yes deliver to my home",
+            "Yes add it to my next bill",
+            "Yes add it to my bill",
+            "Yes deliver to my home address"
+          ]
+        }
+      ],
+      "types": [],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CaptureContactIdIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "contact_id",
+              "type": "AMAZON.Ordinal",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.932567318171.1471070221177"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.932567318171.1471070221177",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please provide your contact id"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "11"
+}
